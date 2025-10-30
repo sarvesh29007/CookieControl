@@ -1,7 +1,7 @@
 CookieControl 🍪
 A lightweight and powerful Chrome extension for advanced, temporary cookie management. Take control of your privacy by deciding exactly how long sites can store data on your browser.
 
-(Tip: Take a screenshot of your extension's popup and replace the line above. For example, if you name your screenshot promo.png in the images folder, you would change it to ![Screenshot](images/promo.png))
+
 
 Features
 Session-Only Deletion: Grant cookie permissions "For This Session Only." All cookies from that site are automatically deleted when the tab is closed.
