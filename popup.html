@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CookieControl</title>
+  <style>
+    body {
+      width: 260px; /* Made slightly wider */
+      font-family: Arial, sans-serif;
+      padding: 10px;
+    }
+    h4 {
+      margin-top: 0;
+      text-align: center;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    #session-btn {
+      background-color: #4285f4;
+      color: white;
+      font-weight: bold;
+    }
+    #timer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .timer-btn {
+      background-color: #f4b400;
+      color: white;
+      padding: 8px;
+      margin-top: 0;
+      font-size: 13px;
+    }
+    #delete-now-btn {
+      background-color: #ea4335;
+      color: white;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    /* --- NEW --- */
+    #nuke-btn {
+      background-color: #202124; /* Dark/Scary button */
+      color: #ea4335; /* Red text */
+      font-weight: bold;
+    }
+    #status {
+      font-size: 14px;
+      margin-top: 15px;
+      min-height: 20px;
+      text-align: center;
+    }
+    
+    /* --- NEW DASHBOARD STYLES --- */
+    #dashboard {
+      margin-top: 15px;
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
+    }
+    #dashboard-title {
+      font-weight: bold;
+      font-size: 14px;
+      text-align: center;
+      margin: 0 0 5px 0;
+    }
+    #active-timers-list {
+      max-height: 100px;
+      overflow-y: auto;
+      font-size: 13px;
+    }
+    .timer-entry {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4px;
+    }
+    .timer-domain {
+      word-break: break-all;
+    }
+    .cancel-alarm {
+      background: #eee;
+      color: #333;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      padding: 2px 5px;
+      font-size: 12px;
+      width: auto;
+      margin: 0 0 0 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h4>CookieControl</h4>
+  <p id="domain-display" style="text-align: center;"></p>
+
+  <button id="session-btn">For This Session Only</button>
+
+  <div id="timer-grid">
+    <button class="timer-btn" data-minutes="15">15 Min</button>
+    <button class="timer-btn" data-minutes="30">30 Min</button>
+    <button class="timer-btn" data-minutes="60">1 Hour</button>
+    <button class="timer-btn" data-minutes="120">2 Hours</button>
+    <button class="timer-btn" data-minutes="180">3 Hours</button>
+    <button class="timer-btn" data-minutes="240">4 Hours</button>
+    <button class="timer-btn" data-minutes="300">5 Hours</button>
+    <button class="timer-btn" data-minutes="360">6 Hours</button>
+  </div>
+  
+  <button id="delete-now-btn">Delete Cookies NOW</button>
+
+  <button id="nuke-btn">Wipe All Site Data</button>
+
+  <p id="status"></p>
+
+  <div id="dashboard">
+    <p id="dashboard-title">Active Timers</p>
+    <div id="active-timers-list">
+      </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
